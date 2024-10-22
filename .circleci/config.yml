@@ -28,8 +28,10 @@ jobs:
       # Checkout the code as the first step.
       - checkout
       - run:
+          name: Install pytest
+          command: pip install pytest
+      - run:
           name: Run tests
-          # This assumes pytest is installed. If not, add steps to install it.
           command: pytest
 
 # Orchestrate jobs using workflows
